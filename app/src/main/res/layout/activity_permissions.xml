@@ -1,0 +1,116 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_mediastorage_audio_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Audio Permission"
+            android:textStyle="bold" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_mediastorage_image_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Image Permission"
+            android:textStyle="bold" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_mediastorage_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Storage Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_contacts_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contacts Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_camera_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Camera Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_location_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_calllog_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Logs Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_phone_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_sms_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sms Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_microphone_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Microphone Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_notification_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_filestorage_allow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Files Permission"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/sw_grant_all"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Allow All Permissions"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</ScrollView>
