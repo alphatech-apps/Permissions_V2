@@ -60,7 +60,7 @@ dependencies {
     implementation 'com.github.alphatech-apps:Permissions_V2:Latest_version'
 }
 ```
-### LATEST-VERSION
+#### LATEST-VERSION
 [![](https://jitpack.io/v/alphatech-apps/Permissions_V2.svg)](https://jitpack.io/#alphatech-apps/Permissions_V2)
 
 
@@ -94,7 +94,7 @@ dependencies {
 // Request multiple permissions at once
         PermissionsRuntime.requestAllPermission(this,"",true,null);
 ```
-### All others:
+#### All others:
 
 
 ```java
@@ -198,7 +198,7 @@ dependencies {
 }
 ```
 
-### All others:
+#### All others:
 
 ```java
 // Request GPS (Location service must be enabled)
@@ -300,11 +300,10 @@ dependencies {
 
 Here’s how it looks in action 👇  
 
-| Camera Permission | Multiple Permissions | Device Admin Access | Device Admin Access |
-|-------------------|----------------------|----------------------|----------------------|
-| ![Camera Demo](screenshots/camera.png) | ![Multi Permission Demo](screenshots/multiple.png) | ![Device Admin Demo](screenshots/admin.png) |
+| Camera Permission | Multiple Permissions | Device Admin Access | Device Admin Access | Device Admin Access | Device Admin Access | Device Admin Access | Device Admin Access | Device Admin Access | Device Admin Access | Device Admin Access | Device Admin Access |
+|-------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
+| ![Camera Demo](screenshots/camera.png) | ![Multi Permission Demo](screenshots/multiple.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/admin.png) |
 
-👉 Place your GIFs or screenshots inside the `screenshots/` folder in the repo.  
 
 ---
 
