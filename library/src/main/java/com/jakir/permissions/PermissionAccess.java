@@ -241,58 +241,58 @@ public class PermissionAccess {
         });
     }
 
-    public static void requestGpsEnabledAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_GPS, msg, showDialog, icon, classService);
+    public static void requestGpsEnabledAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_GPS, msg, showDialog, image, classService);
     }
 
-    public static void requestDeviceAdminAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_DEVICE_ADMIN, msg, showDialog, icon, classService);
+    public static void requestDeviceAdminAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_DEVICE_ADMIN, msg, showDialog, image, classService);
     }
 
-    public static void requestAccessibilityAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_ACCESSIBILITY, msg, showDialog, icon, classService);
+    public static void requestAccessibilityAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_ACCESSIBILITY, msg, showDialog, image, classService);
     }
 
-    public static void requestSystemAlertAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_OVERLAY, msg, showDialog, icon, classService);
+    public static void requestSystemAlertAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_OVERLAY, msg, showDialog, image, classService);
     }
 
-    public static void requestBatteryOptimizationAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_BATTERY_OPT, msg, showDialog, icon, classService);
+    public static void requestBatteryOptimizationAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_BATTERY_OPT, msg, showDialog, image, classService);
     }
 
-    public static void requestUsagesAccessAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_USAGE_ACCESS, msg, showDialog, icon, classService);
+    public static void requestUsagesAccessAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_USAGE_ACCESS, msg, showDialog, image, classService);
     }
 
-    public static void requestManageStorageAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_MANAGESTORAGE, msg, showDialog, icon, classService);
+    public static void requestManageStorageAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_MANAGESTORAGE, msg, showDialog, image, classService);
     }
 
-    public static void requestModifySystemSettingsAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_MODIFY_SYSTEM_SETTINGS, msg, showDialog, icon, classService);
+    public static void requestModifySystemSettingsAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_MODIFY_SYSTEM_SETTINGS, msg, showDialog, image, classService);
     }
 
-    public static void requestDontDistrubAccessAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_DONT_DISTURB, msg, showDialog, icon, classService);
+    public static void requestDontDistrubAccessAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_DONT_DISTURB, msg, showDialog, image, classService);
     }
 
-    public static void requestNotificationListenerAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_NOTIFICATION_LISTENER, msg, showDialog, icon, classService);
+    public static void requestNotificationListenerAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_NOTIFICATION_LISTENER, msg, showDialog, image, classService);
     }
 
-    public static void requestInstallUnknownAppsAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_INSTALL_UNKNOWN_APPS, msg, showDialog, icon, classService);
+    public static void requestInstallUnknownAppsAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_INSTALL_UNKNOWN_APPS, msg, showDialog, image, classService);
     }
 
-    public static void requestMediaProjectionAccess(Context context, String msg, boolean showDialog, Drawable icon, Class<?> classService) {
-        requestAccessPermissions(context, REQUEST_CODE_MEDIA_PROJECTION, msg, showDialog, icon, classService);
+    public static void requestMediaProjectionAccess(Context context, String msg, boolean showDialog, Drawable image, Class<?> classService) {
+        requestAccessPermissions(context, REQUEST_CODE_MEDIA_PROJECTION, msg, showDialog, image, classService);
     }
 
-    public static void requestAccessPermissions(Context context, int requestCode, String message, boolean showDialog, Drawable icon, Class<?> classService) {
+    public static void requestAccessPermissions(Context context, int requestCode, String message, boolean showDialog, Drawable image, Class<?> classService) {
         Bottomsheet_dialog_Access dialog = new Bottomsheet_dialog_Access(context);
         if (showDialog) {
-            dialog.show(requestCode, message, icon, classService);
+            dialog.show(requestCode, message, image, classService);
         } else {
             dialog.Notshow(requestCode, classService);
         }

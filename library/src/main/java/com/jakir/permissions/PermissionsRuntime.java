@@ -52,28 +52,28 @@ public class PermissionsRuntime {
     }
 
     // 📥 Request single permission using dialog
-    public static void requestPermission(Context context, String permission, int requestCode, String message, boolean showDialog, Drawable icon) {
+    public static void requestPermission(Context context, String permission, int requestCode, String message, boolean showDialog, Drawable image) {
         Bottomsheet_dialog_Single dialog = new Bottomsheet_dialog_Single(context);
         if (showDialog) {
-            dialog.show(permission, requestCode, message, icon);
+            dialog.show(permission, requestCode, message, image);
         } else {
             dialog.Notshow(permission, requestCode);
         }
     }
 
     // 📥 Request multiple permissions using dialog
-    public static void requestMultiplePermission(Context context, String[] permissions, int requestCode, String message, boolean showDialog, Drawable icon) {
+    public static void requestMultiplePermission(Context context, String[] permissions, int requestCode, String message, boolean showDialog, Drawable image) {
         Bottomsheet_dialog_Multiple dialog = new Bottomsheet_dialog_Multiple(context);
         if (showDialog) {
-            dialog.show(permissions, requestCode, message, icon);
+            dialog.show(permissions, requestCode, message, image);
         } else {
             dialog.Notshow(permissions, requestCode);
         }
     }
 
     // 🧾 All-in-one multiple permission request
-    public static void requestAllPermission(Context context, String message, boolean showDialog, Drawable icon) {
-        requestMultiplePermission(context, PermissionsRuntime_helper.AllPermissions, REQUEST_CODE_ALL_PERMISSION, message, showDialog, icon);
+    public static void requestAllPermission(Context context, String message, boolean showDialog, Drawable image) {
+        requestMultiplePermission(context, PermissionsRuntime_helper.AllPermissions, REQUEST_CODE_ALL_PERMISSION, message, showDialog, image);
     }
 
     // 🎵 Media Storage (images + audio)
@@ -81,8 +81,8 @@ public class PermissionsRuntime {
         return isPermissionGranted(context, PermissionsRuntime_helper.MediaImagePermission) && isPermissionGranted(context, PermissionsRuntime_helper.MediaAudioPermission);
     }
 
-    public static void requestMediaStoragePermission(Context context, String message, boolean showDialog, Drawable icon) {
-        requestMultiplePermission(context, PermissionsRuntime_helper.MediaStoragePermissions, REQUEST_CODE_MEDIASTORAGE, message, showDialog, icon);
+    public static void requestMediaStoragePermission(Context context, String message, boolean showDialog, Drawable image) {
+        requestMultiplePermission(context, PermissionsRuntime_helper.MediaStoragePermissions, REQUEST_CODE_MEDIASTORAGE, message, showDialog, image);
     }
 
     // 📁 File storage (scoped or legacy)
@@ -94,16 +94,16 @@ public class PermissionsRuntime {
         }
     }
 
-    public static void requestFileStoragePermission(Context context, String message, boolean showDialog, Drawable icon) {
+    public static void requestFileStoragePermission(Context context, String message, boolean showDialog, Drawable image) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             Bottomsheet_dialog_Access dialog = new Bottomsheet_dialog_Access(context);
             if (showDialog) {
-                dialog.show(REQUEST_CODE_FILESTORAGE, message, icon, null);
+                dialog.show(REQUEST_CODE_FILESTORAGE, message, image, null);
             } else {
                 dialog.Notshow(REQUEST_CODE_FILESTORAGE, null);
             }
         } else {
-            requestMultiplePermission(context, PermissionsRuntime_helper.MediaStoragePermissions, REQUEST_CODE_FILESTORAGE, message, showDialog, icon);
+            requestMultiplePermission(context, PermissionsRuntime_helper.MediaStoragePermissions, REQUEST_CODE_FILESTORAGE, message, showDialog, image);
         }
     }
 
@@ -112,64 +112,64 @@ public class PermissionsRuntime {
         return isPermissionGranted(context, PermissionsRuntime_helper.ContactsPermission);
     }
 
-    public static void requestContactsPermission(Context context, String msg, boolean showDialog, Drawable icon) {
-        requestPermission(context, PermissionsRuntime_helper.ContactsPermission, REQUEST_CODE_CONTACTS, msg, showDialog, icon);
+    public static void requestContactsPermission(Context context, String msg, boolean showDialog, Drawable image) {
+        requestPermission(context, PermissionsRuntime_helper.ContactsPermission, REQUEST_CODE_CONTACTS, msg, showDialog, image);
     }
 
     public static boolean checkCameraPermission(Context context) {
         return isPermissionGranted(context, PermissionsRuntime_helper.CameraPermission);
     }
 
-    public static void requestCameraPermission(Context context, String msg, boolean showDialog, Drawable icon) {
-        requestPermission(context, PermissionsRuntime_helper.CameraPermission, REQUEST_CODE_CAMERA, msg, showDialog, icon);
+    public static void requestCameraPermission(Context context, String msg, boolean showDialog, Drawable image) {
+        requestPermission(context, PermissionsRuntime_helper.CameraPermission, REQUEST_CODE_CAMERA, msg, showDialog, image);
     }
 
     public static boolean checkLocationPermission(Context context) {
         return isPermissionGranted(context, PermissionsRuntime_helper.LocationPermission);
     }
 
-    public static void requestLocationPermission(Context context, String msg, boolean showDialog, Drawable icon) {
-        requestPermission(context, PermissionsRuntime_helper.LocationPermission, REQUEST_CODE_LOCATION, msg, showDialog, icon);
+    public static void requestLocationPermission(Context context, String msg, boolean showDialog, Drawable image) {
+        requestPermission(context, PermissionsRuntime_helper.LocationPermission, REQUEST_CODE_LOCATION, msg, showDialog, image);
     }
 
     public static boolean checkCallLogPermission(Context context) {
         return isPermissionGranted(context, PermissionsRuntime_helper.CalLogPermission);
     }
 
-    public static void requestCallLogPermission(Context context, String msg, boolean showDialog, Drawable icon) {
-        requestPermission(context, PermissionsRuntime_helper.CalLogPermission, REQUEST_CODE_CALLLOG, msg, showDialog, icon);
+    public static void requestCallLogPermission(Context context, String msg, boolean showDialog, Drawable image) {
+        requestPermission(context, PermissionsRuntime_helper.CalLogPermission, REQUEST_CODE_CALLLOG, msg, showDialog, image);
     }
 
     public static boolean checkPhonePermission(Context context) {
         return isPermissionGranted(context, PermissionsRuntime_helper.PhonePermission);
     }
 
-    public static void requestPhonePermission(Context context, String msg, boolean showDialog, Drawable icon) {
-        requestPermission(context, PermissionsRuntime_helper.PhonePermission, REQUEST_CODE_PHONE, msg, showDialog, icon);
+    public static void requestPhonePermission(Context context, String msg, boolean showDialog, Drawable image) {
+        requestPermission(context, PermissionsRuntime_helper.PhonePermission, REQUEST_CODE_PHONE, msg, showDialog, image);
     }
 
     public static boolean checkSmsPermission(Context context) {
         return isPermissionGranted(context, PermissionsRuntime_helper.SmsPermission);
     }
 
-    public static void requestSmsPermission(Context context, String msg, boolean showDialog, Drawable icon) {
-        requestPermission(context, PermissionsRuntime_helper.SmsPermission, REQUEST_CODE_SMS, msg, showDialog, icon);
+    public static void requestSmsPermission(Context context, String msg, boolean showDialog, Drawable image) {
+        requestPermission(context, PermissionsRuntime_helper.SmsPermission, REQUEST_CODE_SMS, msg, showDialog, image);
     }
 
     public static boolean checkMicrophonePermission(Context context) {
         return isPermissionGranted(context, PermissionsRuntime_helper.RecordAudioPermission);
     }
 
-    public static void requestMicrophonePermission(Context context, String msg, boolean showDialog, Drawable icon) {
-        requestPermission(context, PermissionsRuntime_helper.RecordAudioPermission, REQUEST_CODE_MICROPHONE, msg, showDialog, icon);
+    public static void requestMicrophonePermission(Context context, String msg, boolean showDialog, Drawable image) {
+        requestPermission(context, PermissionsRuntime_helper.RecordAudioPermission, REQUEST_CODE_MICROPHONE, msg, showDialog, image);
     }
 
     public static boolean checkNotificationPermission(Context context) {
         return isPermissionGranted(context, PermissionsRuntime_helper.NotificationPermission);
     }
 
-    public static void requestNotificationPermission(Context context, String msg, boolean showDialog, Drawable icon) {
-        requestPermission(context, PermissionsRuntime_helper.NotificationPermission, REQUEST_CODE_NOTIFICATION, msg, showDialog, icon);
+    public static void requestNotificationPermission(Context context, String msg, boolean showDialog, Drawable image) {
+        requestPermission(context, PermissionsRuntime_helper.NotificationPermission, REQUEST_CODE_NOTIFICATION, msg, showDialog, image);
     }
 
 
