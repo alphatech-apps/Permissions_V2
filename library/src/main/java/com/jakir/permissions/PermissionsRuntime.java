@@ -75,6 +75,15 @@ public class PermissionsRuntime {
     public static void requestAllPermission(Context context, String message, boolean showDialog, Drawable image) {
         requestMultiplePermission(context, PermissionsRuntime_helper.AllPermissions, REQUEST_CODE_ALL_PERMISSION, message, showDialog, image);
     }
+    // 🎵 Media Storage  audio
+    public static boolean checkMediaAudioPermission(Context context) {
+        return isPermissionGranted(context, PermissionsRuntime_helper.MediaAudioPermission);
+    }
+
+    // 🎵 Media Storage images
+    public static boolean checkMediaImagePermission(Context context) {
+        return isPermissionGranted(context, PermissionsRuntime_helper.MediaImagePermission);
+    }
 
     // 🎵 Media Storage (images + audio)
     public static boolean checkMediaStoragePermission(Context context) {

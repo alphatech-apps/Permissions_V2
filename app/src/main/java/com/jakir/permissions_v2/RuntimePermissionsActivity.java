@@ -55,9 +55,9 @@ public class RuntimePermissionsActivity extends AppCompatActivity {
 
     private void setSwitchToggle(MaterialSwitch sw_mediastorage_audio_allow, MaterialSwitch sw_mediastorage_image_allow, MaterialSwitch sw_mediastorage_allow, MaterialSwitch sw_contacts_allow, MaterialSwitch sw_camera_allow, MaterialSwitch sw_location_allow, MaterialSwitch sw_calllog_allow, MaterialSwitch sw_phone_allow, MaterialSwitch sw_sms_allow, MaterialSwitch sw_microphone_allow, MaterialSwitch sw_notification_allow, MaterialSwitch sw_filestorage_allow, MaterialSwitch sw_grant_all) {
         if (sw_mediastorage_audio_allow != null)
-            sw_mediastorage_audio_allow.setChecked(PermissionsRuntime.checkMediaStoragePermission(this));
+            sw_mediastorage_audio_allow.setChecked(PermissionsRuntime.checkMediaAudioPermission(this));
         if (sw_mediastorage_image_allow != null)
-            sw_mediastorage_image_allow.setChecked(PermissionsRuntime.checkMediaStoragePermission(this));
+            sw_mediastorage_image_allow.setChecked(PermissionsRuntime.checkMediaImagePermission(this));
         if (sw_mediastorage_allow != null)
             sw_mediastorage_allow.setChecked(PermissionsRuntime.checkMediaStoragePermission(this));
         if (sw_contacts_allow != null)
@@ -100,13 +100,13 @@ public class RuntimePermissionsActivity extends AppCompatActivity {
 
 
         sw_mediastorage_audio_allow.setOnClickListener(v -> {
-            if (!PermissionsRuntime.checkMediaStoragePermission(this)) {
-                PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaAudioPermission, 262, "", true, null);
+            if (!PermissionsRuntime.checkMediaAudioPermission(this)) {
+                PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaAudioPermission, REQUEST_CODE_MEDIASTORAGE_AUDIO, "", true, null);
             }
         });
         sw_mediastorage_image_allow.setOnClickListener(v -> {
-            if (!PermissionsRuntime.checkMediaStoragePermission(this)) {
-                PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaImagePermission, 292, "", true, null);
+            if (!PermissionsRuntime.checkMediaImagePermission(this)) {
+                PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaImagePermission, REQUEST_CODE_MEDIASTORAGE_IMAGE, "", true, null);
             }
         });
         sw_mediastorage_allow.setOnClickListener(v -> {
@@ -170,11 +170,11 @@ public class RuntimePermissionsActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE_ALL_PERMISSION) {
             setSwitchToggle(sw_mediastorage_audio_allow, sw_mediastorage_image_allow, sw_mediastorage_allow, sw_contacts_allow, sw_camera_allow, sw_location_allow, sw_calllog_allow, sw_phone_allow, sw_sms_allow, sw_microphone_allow, sw_notification_allow, sw_filestorage_allow, sw_grant_all);
         } else if (requestCode == REQUEST_CODE_MEDIASTORAGE_AUDIO) {
-            boolean sw_mediastorage_state = PermissionsRuntime.checkMediaStoragePermission(this);
+            boolean sw_mediastorage_state = PermissionsRuntime.checkMediaAudioPermission(this);
             sw_mediastorage_audio_allow.setChecked(sw_mediastorage_state);
             Toast.makeText(this, sw_mediastorage_state ? "✅ Audio Permission Granted" : "❌ Audio Permission Denied", Toast.LENGTH_SHORT).show();
          } else if (requestCode == REQUEST_CODE_MEDIASTORAGE_IMAGE) {
-            boolean sw_mediastorage_state = PermissionsRuntime.checkMediaStoragePermission(this);
+            boolean sw_mediastorage_state = PermissionsRuntime.checkMediaImagePermission(this);
             sw_mediastorage_image_allow.setChecked(sw_mediastorage_state);
             Toast.makeText(this, sw_mediastorage_state ? "✅ Image Permission Granted" : "❌ Image Permission Denied", Toast.LENGTH_SHORT).show();
          } else if (requestCode == REQUEST_CODE_MEDIASTORAGE) {
