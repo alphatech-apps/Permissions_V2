@@ -99,15 +99,15 @@ dependencies {
 
 ```java
 // Request Media Audio permission (read/write audio files)
-        if (!PermissionsRuntime.checkMediaStoragePermission(this)) {
-    PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaAudioPermission, 262, "", true, null);
+        if (!PermissionsRuntime.checkMediaAudioPermission(this)) {
+    PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaAudioPermission, REQUEST_CODE_MEDIASTORAGE_AUDIO, "", true, null);
 }
 ```
 
 ```java
 // Request Media Image permission (read/write image files)
-        if (!PermissionsRuntime.checkMediaStoragePermission(this)) {
-    PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaImagePermission, 292, "", true, null);
+        if (!PermissionsRuntime.checkMediaImagePermission(this)) {
+    PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaImagePermission, REQUEST_CODE_MEDIASTORAGE_IMAGE, "", true, null);
 }
 ```
 
