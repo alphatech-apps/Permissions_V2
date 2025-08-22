@@ -300,11 +300,17 @@ dependencies {
 
 Here’s how it looks in action 👇  
 
-| Camera Permission                      | Multiple Permissions                               | Location Permission                            | Microphone Permission                     | Device Admin Access                         | All Files Access                              | Usage Access                                | Notification Access                        | Don't Disturb Access                      | 
-|----------------------------------------|----------------------------------------------------|------------------------------------------------|-------------------------------------------|---------------------------------------------|-----------------------------------------------|---------------------------------------------|--------------------------------------------|-------------------------------------------|
-| ![Camera Demo](screenshots/camera.png) | ![Multi Permission Demo](screenshots/multiple.png) | ![Device Admin Demo](screenshots/location.png) | ![Device Admin Demo](screenshots/mic.png) | ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/allfile.png) | ![Device Admin Demo](screenshots/usage.png) | ![Device Admin Demo](screenshots/noti.png) | ![Device Admin Demo](screenshots/dnd.png) |
+#### Runtime Permissions
 
+| Camera Permission                      | Multiple Permissions                               | Location Permission                            | Microphone Permission                     | 
+|----------------------------------------|----------------------------------------------------|------------------------------------------------|-------------------------------------------|
+| ![Camera Demo](screenshots/camera.png) | ![Multi Permission Demo](screenshots/multiple.png) | ![Device Admin Demo](screenshots/location.png) | ![Device Admin Demo](screenshots/mic.png) |
 
+#### Special Access
+
+| Device Admin Access                         | All Files Access                              | Usage Access                                | Notification Access                        | Don't Disturb Access                      |
+|---------------------------------------------|-----------------------------------------------|---------------------------------------------|--------------------------------------------|-------------------------------------------|
+| ![Device Admin Demo](screenshots/admin.png) | ![Device Admin Demo](screenshots/allfile.png) | ![Device Admin Demo](screenshots/usage.png) | ![Device Admin Demo](screenshots/noti.png) | ![Device Admin Demo](screenshots/dnd.png) |
 ---
 
 ## 🤝 Contributing  
