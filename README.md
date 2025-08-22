@@ -60,6 +60,9 @@ dependencies {
     implementation 'com.github.alphatech-apps:Permissions_V2:Latest_version'
 }
 ```
+### LATEST-VERSION
+[![](https://jitpack.io/v/alphatech-apps/Permissions_V2.svg)](https://jitpack.io/#alphatech-apps/Permissions_V2)
+
 
 *(If not published yet, you can import `.aar` / `.module` locally.)*  
 
@@ -71,32 +74,112 @@ dependencies {
 
 ```java
 // Check single permission with BottomSheet Dialog -> camera 
-if (!PermissionsRuntime.checkCameraPermission(this)) {
-    PermissionsRuntime.requestCameraPermission(this,
-        "Camera permission is required to take photos.", // BottomSheet dialog message
-        true, // if you want to show BottomSheet dialog keep true, otherwise false
-        getDrawable(R.drawable.image_camera) // BottomSheet dialog image
-    );
-}
+        if (!PermissionsRuntime.checkCameraPermission(this)) {
+         PermissionsRuntime.requestCameraPermission(this,
+               "Camera permission is required to take photos.", // BottomSheet dialog message
+              true, // if you want to show BottomSheet dialog keep true, otherwise false
+              getDrawable(R.drawable.image_camera) // BottomSheet dialog image
+           );
+        }
 ```
 
 ```java
 // Check single permission without any Dialog -> camera 
-if (!PermissionsRuntime.checkCameraPermission(this)) {
-    PermissionsRuntime.requestCameraPermission(this,
-        "",
-        true, // if you want to show BottomSheet dialog keep true, otherwise false
-        null);
+        if (!PermissionsRuntime.checkCameraPermission(this)) {
+     PermissionsRuntime.requestCameraPermission(this,"",true,null);
 }
 ```
 
 ```java
 // Request multiple permissions at once
-PermissionsRuntime.requestAllPermission(
-    this,
-    "App needs all required permissions to work properly.",
-    true,
-    getDrawable(R.drawable.image_permission_multiple));
+        PermissionsRuntime.requestAllPermission(this,"",true,null);
+```
+### All others:
+
+
+```java
+// Request Media Audio permission (read/write audio files)
+        if (!PermissionsRuntime.checkMediaStoragePermission(this)) {
+    PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaAudioPermission, 262, "", true, null);
+}
+```
+
+```java
+// Request Media Image permission (read/write image files)
+        if (!PermissionsRuntime.checkMediaStoragePermission(this)) {
+    PermissionsRuntime.requestPermission(this, PermissionsRuntime_helper.MediaImagePermission, 292, "", true, null);
+}
+```
+
+```java
+// Request Media Storage permission (all media files: image, audio, video)
+        if (!PermissionsRuntime.checkMediaStoragePermission(this)) {
+    PermissionsRuntime.requestMediaStoragePermission(this, "", true, null);
+}
+```
+
+```java
+// Request Contacts permission (read/write contacts)
+        if (!PermissionsRuntime.checkContactsPermission(this)) {
+    PermissionsRuntime.requestContactsPermission(this, "", true, null);
+}
+```
+
+```java
+// Request Camera permission
+        if (!PermissionsRuntime.checkCameraPermission(this)) {
+    PermissionsRuntime.requestCameraPermission(this, "", true, null);
+}
+```
+
+```java
+// Request Location permission (fine & coarse location)
+        if (!PermissionsRuntime.checkLocationPermission(this)) {
+    PermissionsRuntime.requestLocationPermission(this, "", true, null);
+}
+```
+
+```java
+// Request Call Log permission (read call history)
+        if (!PermissionsRuntime.checkCallLogPermission(this)) {
+    PermissionsRuntime.requestCallLogPermission(this, "", true, null);
+}
+```
+
+```java
+// Request Phone permission (make and manage phone calls)
+        if (!PermissionsRuntime.checkPhonePermission(this)) {
+    PermissionsRuntime.requestPhonePermission(this, "", true, null);
+}
+```
+
+```java
+// Request SMS permission (send & read SMS)
+        if (!PermissionsRuntime.checkSmsPermission(this)) {
+    PermissionsRuntime.requestSmsPermission(this, "", true, null);
+}
+```
+
+```java
+// Request Microphone permission (record audio)
+        if (!PermissionsRuntime.checkMicrophonePermission(this)) {
+    PermissionsRuntime.requestMicrophonePermission(this, "", true, null);
+}
+```
+
+```java
+// Request Notification permission (post notifications, Android 13+)
+        if (!PermissionsRuntime.checkNotificationPermission(this)) {
+    PermissionsRuntime.requestNotificationPermission(this, "", true, null);
+}
+```
+
+```java
+// Request File Storage permission (read/write external storage)
+        if (!PermissionsRuntime.checkFileStoragePermission(this)) {
+    PermissionsRuntime.requestFileStoragePermission(this, "", true, null);
+}
+
 ```
 
 ---
@@ -105,7 +188,7 @@ PermissionsRuntime.requestAllPermission(
 
 ```java
 // Check and Request Device Admin with BottomSheet Dialog 
-if (!PermissionAccess.isDeviceAdminEnabled(this, MyDeviceAdminReceiver.class)) {
+        if (!PermissionAccess.isDeviceAdminEnabled(this, MyDeviceAdminReceiver.class)) {
     PermissionAccess.requestDeviceAdminAccess(
             this,
             "", // BottomSheet dialog message
@@ -115,6 +198,7 @@ if (!PermissionAccess.isDeviceAdminEnabled(this, MyDeviceAdminReceiver.class)) {
 }
 ```
 
+### All others:
 
 ```java
 // Request GPS (Location service must be enabled)
