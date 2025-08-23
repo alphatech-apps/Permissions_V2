@@ -181,6 +181,10 @@ public class RuntimePermissionsActivity extends AppCompatActivity {
             boolean sw_mediastorage_state = PermissionsRuntime.checkMediaStoragePermission(this);
             sw_mediastorage_allow.setChecked(sw_mediastorage_state);
             Toast.makeText(this, sw_mediastorage_state ? "✅ MEDIASTORAGE Permission Granted" : "❌ MEDIASTORAGE Permission Denied", Toast.LENGTH_SHORT).show();
+        } else if (requestCode == REQUEST_CODE_FILESTORAGE) {
+            boolean sw_mediastorage_state = PermissionsRuntime.checkFileStoragePermission(this);
+            sw_filestorage_allow.setChecked(sw_mediastorage_state);
+            Toast.makeText(this, sw_mediastorage_state ? "✅ FILESTORAGE Permission Granted" : "❌ FILESTORAGE Permission Denied", Toast.LENGTH_SHORT).show();
         } else if (requestCode == REQUEST_CODE_CONTACTS) {
             boolean sw_contacts_state = PermissionsRuntime.checkContactsPermission(this);
             sw_contacts_allow.setChecked(sw_contacts_state);
